@@ -1,0 +1,281 @@
+body {
+	margin: 0;
+	padding: 0;
+ 	background-color: rgba(73, 114, 147, 1);
+}	
+
+@font-face {
+	font-family: logo;
+	src: url(../fonts/logo.ttf);
+}
+
+@font-face {
+	font-family: logo-text;
+	src: url(../fonts/logo-text.ttf);
+}
+
+@font-face {
+	font-family: Existence;
+	src: url(../fonts/Existence.otf);
+}
+
+@font-face {
+	font-family: select-all;
+	src: url(../fonts/select-all.ttf);
+}
+
+@font-face {
+	font-family: download;
+	src: url(../fonts/download.ttf);
+}
+
+@font-face {
+	font-family: tick;
+	src: url(../fonts/tick.ttf);
+}
+
+@font-face {
+	font-family: unselect-all;
+	src: url(../fonts/unselect-all.ttf);
+}
+
+@font-face {
+	font-family: insta-login;
+	src: url(../fonts/insta-login.ttf);
+}
+
+.logo-text {
+	font-family: logo-text;
+	font-size: 350px;
+	color: #FFF;
+	position: relative;
+	top: .05em;
+}
+
+.logo-text:before {
+	content: "c";
+}
+
+.logo {
+	font-family: logo;
+	color: #fff;
+	font-size: 50px;
+	position: relative;
+	top: .5em;
+}
+
+.logo:before {
+	content: "b";
+}
+
+.intro {
+	font-family: Existence;
+	color: #FFF;
+	font-size: 25px;
+	position: relative;
+	top: -5em;
+}
+
+.outer-wrapper-box {
+	width: 95%;
+	min-height: 70%;
+	max-height: 70%;
+	background-color: #fff;
+	border: 8px solid rgba(0, 0, 0, 0.9);
+	border-top-width: 80px;
+	margin-bottom: 14em;
+	margin-top: -3%;
+}
+
+.data-content {
+	margin-top: -1.5em;
+	width: 73%;
+	position: relative;
+	left: -1.5em;
+}
+
+.inner-content {
+	max-height: 65%;
+	width: auto;
+	overflow: auto;
+}
+
+.user-details {
+	position: relative;
+	top: -2.2em;
+	left: -33%;
+	font-size: 24px;
+	font-family: Existence;
+	color: #fff;
+}
+
+.select-all {
+	font-family: select-all;
+	font-weight: normal;
+	font-style: normal;
+	color: #fff;
+	position: relative;
+	top: -2.1em;
+	font-size: 40px;
+	float: right;
+	margin-right: 2em;
+	cursor: pointer;
+}
+
+.select-all:before {
+	content: "0";
+}
+
+.unselect-all {
+	font-family: unselect-all;
+	color: #fff;
+	position: relative;
+	top: -2.1em;
+	font-size: 40px;
+	float: right;
+	margin-right: 2em;
+	cursor: pointer;
+}
+
+.unselect-all:before {
+	content: "3";
+}
+
+.download {
+	font-family: download;
+	color: #fff;
+	position: relative;
+	top: -2.4em;
+	font-size: 35px;
+	float: right;
+	margin-right: -2.5em;
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+input[type="checkbox"][id^="cb"] {
+  display: none;
+}
+
+label {
+  border: 2px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+}
+
+label:before {
+  background-color: #fff;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+  z-index: 100000;
+}
+
+label img {
+  height: 100px;
+  width: 100x;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  font-family: tick;
+  font-size: 27px;
+  content: "2";
+  color: #fff;
+  line-height: 1.3em;
+  background-color: #497293;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+
+.documentation {
+	font-family: Existence;
+	color: #789;
+	margin-top: 1.5em;
+	margin-bottom: 0.9em;
+	margin-left: 1.5em;
+	font-size: 23px;
+	position: relative;
+}
+
+.doc-select-all {
+	font-family: select-all;
+	font-size: 35px;
+}
+
+.doc-select-all:before {
+	content: "0";
+}
+
+.fixed-doc-font-size {
+	font-size: 21px;
+	font-weight: normal;
+	font-style: normal;
+	position: relative;
+	top: -0.5em;
+	left: -1.8em;
+}
+
+.login {
+	font-family: insta-login;
+	color: #fff;
+	font-size: 120px;
+	height: 50px;
+	width: 140px;
+	border-radius: 5px;
+	margin-top: 2em;
+}
+
+.login:before {
+	content: "a";
+}
+
+.login:hover, .login:focus {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+a {
+	text-decoration: none; 
+}
+
+#loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -32px;
+	margin-left: -32px;
+	display: none;
+}
+
+.fadeIn {
+	opacity: 0.3;
+}
